@@ -1,0 +1,39 @@
+﻿<Window x:Class="cryptoProject.MainWindow"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cryptoProject"
+        mc:Ignorable="d"
+        Title="crypto" Height="280" Width="320" ResizeMode="CanMinimize" Foreground="#FF1C1C1C">
+    <Grid Margin="0,0,-0.4,0" Background="#FF1C1C1C">
+        <Label Content="BTC:" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Width="105" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF"/>
+        <Label Name="btc_price" Content="0" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" Width="182" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF" HorizontalContentAlignment="Right"/>
+
+        <Label Content="ETH:" HorizontalAlignment="Left" Margin="20,50,0,0" VerticalAlignment="Top" Width="105" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF"/>
+        <Label Name="eth_price" Content="0" HorizontalAlignment="Left" Margin="105,50,0,0" VerticalAlignment="Top" Width="182" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF" HorizontalContentAlignment="Right"/>
+
+        <Label Content="XPR:" HorizontalAlignment="Left" Margin="20,90,0,0" VerticalAlignment="Top" Width="105" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF"/>
+        <Label Name="xpr_price" Content="0" HorizontalAlignment="Left" Margin="105,90,0,0" VerticalAlignment="Top" Width="182" FontFamily="Calibri" FontSize="24" Background="#00EEEEFF" Foreground="#FF43BBFF" HorizontalContentAlignment="Right"/>
+
+
+
+        <Button Content="Узнать курс" HorizontalAlignment="Center" Width="260" Height="35" Margin="0,205,0,0" VerticalAlignment="Top" Click="Button_Click" Foreground="#FF1C1C1C" Background="#FF43BBFF" BorderBrush="#00707070" FontSize="13"/>
+        <ComboBox Name="Combo" materialDesign:HintAssist.Hint="USD" Width="133" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="23,168,0,0" VerticalAlignment="Top" Height="30" SelectedIndex="0" BorderBrush="#00ACACAC" Background="#FFEEEEEE" Foreground="#FF1C1C1C" IsEditable="False">
+            <ComboBoxItem>USD</ComboBoxItem>
+            <ComboBoxItem>RUB</ComboBoxItem>
+            <ComboBoxItem>UAH</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Name="UsernamePlaceholder_Main" Text="Бюджет" Margin="0,168,27,0" Height="30" Width="115" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF43BBFF" FontSize="16" FontFamily="Calibri" Typography.Capitals="AllSmallCaps"/>
+        <TextBox Name="UsernameTextBox_Main" Margin="0,168,27,0" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" HorizontalAlignment="Right" VerticalAlignment="Top" Width="115" Height="30" Background="Transparent" BorderBrush="#FFEEEEEE" Foreground="#FF43BBFF" BorderThickness="0 0 0 1" FontFamily="Calibri" FontSize="16" SelectionBrush="#FFEEEEEE" CaretBrush="#FF43BBFF" KeyDown="UsernameTextBox_Main_KeyDown"/>
+    </Grid>
+</Window>
